@@ -12,13 +12,10 @@ import org.springframework.web.client.RestTemplate;
 public class StockController {
 
 
-    private static String myAlphaKey = "demo";
-    private static String stockInfoEndpoint = "https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey=demo + myAlphaKey " ;
+    private static String myAlphaKey = "MP98OB332PYVADQX";
+    private static String stockInfoEndpoint = "https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey="+ myAlphaKey  ;
 
     @GetMapping("/overview")
-
-
-
     public static Object getStockHandler (RestTemplate restTemplate) {
         return restTemplate.getForObject(stockInfoEndpoint, Object.class);
     }
@@ -27,6 +24,12 @@ public class StockController {
         return  stockInfoEndpoint;
     }
 
+    @GetMapping("/global")
+    private static String stockGlobalQuote =  " https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=" + myAlphaKey;
+    public static Object getStockGlobalQuote (RestTemplate restTemplate){
+        return restTemplate.getForObject(stockGlobalQuote,Object.class);
+
+    }
 }
 
 
