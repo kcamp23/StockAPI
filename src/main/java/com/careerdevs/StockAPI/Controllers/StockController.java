@@ -12,24 +12,27 @@ import org.springframework.web.client.RestTemplate;
 public class StockController {
 
 
-    private static String myAlphaKey = "MP98OB332PYVADQX";
-    private static String stockInfoEndpoint = "https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey="+ myAlphaKey  ;
+    private static String myAlphaKey = "demo";
+    private static String stockInfoEndpoint = "http://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey=" + myAlphaKey;
 
     @GetMapping("/overview")
-    public static Object getStockHandler (RestTemplate restTemplate) {
+    public static Object getStockHandler(RestTemplate restTemplate) {
         return restTemplate.getForObject(stockInfoEndpoint, Object.class);
     }
 
     public static String getStockInfoEndpoint() {
-        return  stockInfoEndpoint;
+        return stockInfoEndpoint;
     }
 
-    @GetMapping("/global")
-    private static String stockGlobalQuote =  " https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=" + myAlphaKey;
-    public static Object getStockGlobalQuote (RestTemplate restTemplate){
-        return restTemplate.getForObject(stockGlobalQuote,Object.class);
+    private static String stockEarnings =  " https://www.alphavantage.co/query?function=earnings&symbol=IBM&apikey=demo" + myAlphaKey;
+
+    @GetMapping("/earnings")
+    public static Object getStockEarnings (RestTemplate restTemplate){
+        return restTemplate.getForObject(stockEarnings,Object.class);
 
     }
 }
+
+//make changes to all the things we went over in class for proper set up
 
 
