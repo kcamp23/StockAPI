@@ -1,5 +1,8 @@
 package com.careerdevs.StockAPI.Models;
 
+
+
+
 public class StockModel {
 
     @JsonProperty ("Description")
