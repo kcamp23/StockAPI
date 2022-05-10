@@ -24,15 +24,13 @@ public class StockController {
         return stockInfoEndpoint;
     }
 
-    private static String stockEarnings =  " https://www.alphavantage.co/query?function=earnings&symbol=IBM&apikey=demo" + myAlphaKey;
+    private static String stockEarnings = " https://www.alphavantage.co/query?function=earnings&symbol=IBM&apikey=demo" + myAlphaKey;
 
     @GetMapping("/earnings")
-    public static Object getStockEarnings (RestTemplate restTemplate){
-        return restTemplate.getForObject(stockEarnings,Object.class);
+    public static Object getStockEarnings(RestTemplate restTemplate) {
+        return restTemplate.getForObject(stockEarnings, Object.class);
 
     }
 }
-
-//make changes to all the things we went over in class for proper set up
 
 
