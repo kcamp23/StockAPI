@@ -1,11 +1,11 @@
-
+package com.careerdevs.StockAPI.Models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.Column;
 
 
-public class Overview {
+public class overview {
 
     private String Symbol;
     private String AssetType;
