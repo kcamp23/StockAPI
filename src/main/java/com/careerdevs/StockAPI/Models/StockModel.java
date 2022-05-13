@@ -1,11 +1,11 @@
 package com.careerdevs.StockAPI.Models;
 
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StockModel {
 
-    @JsonProperty ("Description")
+    @JsonProperty("Description")
     private String description;
 
     @JsonProperty ("Exchange")
