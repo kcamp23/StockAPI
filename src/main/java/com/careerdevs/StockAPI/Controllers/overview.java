@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RequestMapping("/api/stocks")
-public class OverviewController {
+public class overview {
 
     @Autowired
     private Environment env;
