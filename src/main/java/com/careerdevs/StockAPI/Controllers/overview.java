@@ -1,6 +1,5 @@
 package com.careerdevs.StockAPI.Controllers;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
