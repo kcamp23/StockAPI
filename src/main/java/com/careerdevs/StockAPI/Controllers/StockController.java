@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @RequestMapping("/api/stocks")
 
-public ublic class StockController {
+ public class StockController {
 
 
     private static String myAlphaKey = "demo";
