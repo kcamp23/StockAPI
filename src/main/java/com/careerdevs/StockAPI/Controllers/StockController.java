@@ -9,8 +9,6 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/api/stocks")
 
  public class StockController {
-
-
     private static String myAlphaKey = "demo";
     private static String stockInfoEndpoint = "http://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey=" + myAlphaKey;
 
